@@ -1,0 +1,35 @@
+Módulo 2
+
+*** Psicologia das cores ***
+Temos que conhecer bem para escolher as cores de forma correta
+As cores despertam emoções, portanto elas bem harmonizadas
+tende a chamar mais atenção de quem acessa um site. Uma boa
+escolha é muito importante na criação de sites.
+Cores azuis são presentes em sites de empresas de tecnologia.
+Representa: competência, sabedoria, segurança, inteligência, etc.
+Não usar fundo preto com letra branca, pois dá cansaço na vista.
+Vermelho e amarelo comida.
+
+*** Representação das cores ***
+<!-- Representação por nomes -->
+    <h2 style="background-color: blue; color: white">Exemplo de cores</h2>
+<!-- Representação por códigos em rgb (Red, Green, Blue)-->
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255)">Exemplo de cores</h2>
+<!-- Representação por hsl (Hue, Saturation, Luminosity) -->
+    <h2 style="background-color: hsl(240, 100%, 50%); color:hsl(0, 0%, 100%)">Exemplo de cores</h2>
+
+*** Harmonia de cores ***
+Cores são representadas no círculo cromático
+Lá tem as cores primárias, secundárias e terceárias.
+Também se partir ao meio temos as cores frias e quentes
+Num site são recomendados uso de paletas de 3 a 5 cores desconsiderando branco e preto,
+pois estarão presente.
+Num cliente que tem uma logo, vamos utilizar a cor primária da logo do cliente.
+** Cores complementares **
+No círculo cromático são as cores opostas
+** Cores análogas **
+Pega uma cor e a anterior e a próxima
+Se quiser complementar é só escolher a cor oposta a principal escolhida
+** Cores análogas relacionadas **
+Escolha uma ao lado da outra e a terceira é uma depois da próxima ou anterior
+Para mais detalhe e criar uma palheta é preciso acessar o PDF e fazer a melhor escolha.

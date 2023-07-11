@@ -1,0 +1,195 @@
+Anotações HTML5 e CSS
+
+*Primeiros passos:
+Criar pasta, botão direito abrir com CODE
+criar um arquivo index.html
+Digitar ! e enter para código básico
+Editar title da sua escolha
+h1, h2, etc são hierarquias de textos
+p são parágrafos
+
+*Negrito, itálico, marcação de texto
+Negrito <strong> palavra / frase </strong>
+Itálico <em> palavra / frase </em>
+Marcar texto <mark> palavra / frase </mark>
+
+
+*Adicionar ícone
+Em HEAD abaixo de TITLE digita
+link:favicon
+E escolhe o caminho em href="caminho"
+
+*Envelopar uma parte do texto
+Pra isso o texto deve ser selecionado e teclar Crtl+Shift+P
+escolher a opção: Wrap with Abbreviation
+E digitar o comando desejado
+Exeplo <code> Texto do código fonte </code>
+Poré o code não organiza com as identações
+Pra fazer isso é necessário usar o comando
+<pre> <code> código-fonte </code> </pre>
+
+*Retirar espaços antes do texto
+Selecionar texto segura a tecla Shift e tecla Tab pra reduzir espaços
+Pra aumentar espaços é só selecionar e teclar Tab
+
+*Citações
+usar o comando <q> </q>
+ele coloca aspas, porém dá sentido em um citação não apenas aspas
+Para citações completas usa-se o <blockquote cite="link de citação"> Texto citado </blockquote>
+isso desloca o texto para direita
+O parâmetro cite não muda nada visualmente, mas referencia o autor citado
+
+*Abreviações
+Usar o comando
+<abbr title="Significado da sigla"> </abbr>
+Também pode ser usado para explicar uma palavra em específico
+
+*Listas Ordenadas
+<ol> <li> item da lista </li> </ol> Fim da lista
+Pra cada item colocar o <li>
+
+*Listas não ordenadas
+<ul> <li></li> </ul>
+É possível combinar as listas uma dentro da outra
+
+*Lista de definições
+Usada para dar sinificado de termos
+<dl> <dt> Termo </dt> <dd> Descrição </dd> </dl>
+
+*Links e âncoras em HTML
+Selecionar o texto ou palavra que deseja fazer link e adicionar a
+TAG <a href="url"> texto / palavra </a>
+Nesse caso a página será sobrescrita
+
+*Abrir link numa nova guia
+Usar o parâmetro em a
+<a href="url" target="_blank" rel="external"> texto/palavra </a>
+
+*Links internos
+Os links internos são usados para mudar entre uma tela e outra
+O comando é o mesmo, mas em href="nome do html da página"
+Deve ser criado um outro HTML para executar Crtl+Space daí seleciona a desejada
+
+*rel nos links
+o parâmetro rel serve para o mecanismo de busca entender que o link mencionado tem a ver
+com a sequência (next, prev), local (external), ou sem garantia de veracidade (nofollow)
+
+*Link para paginas em diferentes pastas
+outra pasta - href="pasta/arquivo.html"
+voltar - href="./arquivo.html" (uma pasta anterior)
+duas pastas anterior - href="../arquivo.html"
+
+*Links para efetuar download
+Pra adicionar link de download primeiro precisamos criar uma pasta
+dentro dela colocar os arquivos que poderão ser baixados do nosso site
+Vale resaltar que é bom comprimir o arquivo para ficar mais leve
+Feito isso é quase a mesma coisa do outro link
+<a href="pasta/arquivo.formato" download="arquivo.formato" type="verivicar media type"> texto/frase/palavra </a>
+No parâmetro Type devemos verificar, pois depende de cada tipo de arquivo.
+Pra verificar deve ser acessado o site:
+iana.org/assignments/media-types/
+
+*Imagens dinâmicas
+Pra celular 300x300
+Pra tablet ou laptop 700x700
+Pra TV 1000x1000
+TAG
+<picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-media.png" type="image/png">
+        <img src="imagens/foto-grande.png" alt="Foto flexível">
+</picture>
+
+*Áudios na página web
+Crie uma pasta chamada midia
+Cuidados com direitos autorais
+Tamanho, tome cuidado pra não ficar muito pesado
+Renomeie o arquivo pra não ficar com espaços e caracteres especiais
+TAG - <audio src="midia/audio_rock.mp3" autoplay controls></audio>
+TAG MELHOR
+    <audio preload="metadata" autoplay>
+	<source src="midia/audio_rock.mp3" type="audio/mpeg">
+        <source src="midia/audio_rock.wav" type="audio/wav"> __________EVITE____________
+        <source src="midia/audio_rock.ogg" type="audio/ogg">
+        <p>Infelizmente seu navegador não conseguiu reproduzir o áudio</p>
+    </audio>
+Acima o site tentará carregar linha a linha, caso consiga fecha a linha de áudio
+Caso contrário aparece o paráprafo citado
+Compatibilidade
+MP3 WAV OGG
+
+*Vídeos
+Cuidado som os direitos autorais
+Baixe um vídeo grátis no pexels
+Compatibilidade
+Formatos - mp4, mkv, webm, ogv
+Use o programa HANDBRAKE para otimizar formato
+Resumindo, use pequenos arquivos
+Vale resaltar em ter vários formatos de arquivos de vídeo, pois, pode
+funcionar pra um navegador e pra outro não.
+TAG - <video src="midia/audio_rock.mp3" autoplay controls></video>
+TAG MELHOR
+    <video widht="500" poster="imagens/capa-video.png"controls>
+	<source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.mkv" type="video/mkv">
+        <source src="midia/meu-video.webm" type="video/webm">
+	<source src="midia/meu-video.ogv" type="video/ogv">
+        <p>Infelizmente seu navegador não conseguiu reproduzir o vídeo</p>
+    </video>
+
+*Tamanho dos arquivos
+Se você tem um vídeo de 15kB
+Um acesso normal de 1000 pessoas online
+Logo seu site terá uma taxa de download de 15MB x 1000 = 15000MB / 1024 = 14,65GB de consumo de banda
+O caso explicado se trata de vídeos hospedados no local do site
+
+------------------------------------------ CSS ------------------------------------------
+Cascating Style Sheets
+Folhas de Estilo em Cascata
+
+*Estilos Inline
+Esse modo de fazer estilos na página é limiada, pois faz somente linha a linha
+Nesse caso cada <h1>, <p>, etc deve ser configurado individualmente
+Exemplo:
+	<h1 style="color: blue">
+Estios em <body>
+style="background-color: lightskyblue; font-family:Arial, Helvetica, sans-serif; font-size: 20px"
+Estilos em <h1>, <h2> e <p>
+style="color: mediumblue; background-color: dodgerblue;font-size: 1.5em"
+style="color: darkred; font-size: 1.2em
+style="text-align: justify"
+
+*Estilos CSS internos
+Aplicando estilos de forma separada
+Toda parte de estilo é colocado no cabeçalho <head> logo depois de título
+Lá é colocado a parte e o estilo entre {}
+Exemplo
+	body {
+	    background-color: lightsteelblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;  
+	}
+
+	h1 {
+          color: darkblue;
+          background-color: lightblue;
+	}
+
+E assim sucessivamente, isso funciona, porém deve ser feito em cada página e isso resulta em
+pouca eficiência.
+
+*Estilos Externos
+A diferença é que a definição dos estilos são feitas num arquivo.css e esse arquivo deve ser
+referenciado no <head> depois de <title>
+Nesse caso usa-se link:css
+Também pode ser usado mais de um arquivo no link:css
+Nesse arquivo são colocados regras, elas são colocadas depois de @
+
+Mas tudo pode ser combinado, por exemplo combinar coisas de um link externo pra um css e
+também combinar com um style local
+
+*Observações
+Evite usar INLINE
+Usar estilos INTERNOS use somente em estilos pequenos
+Use o externo, pois é muito versátil
+
