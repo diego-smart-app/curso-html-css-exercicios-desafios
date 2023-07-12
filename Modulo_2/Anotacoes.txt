@@ -32,4 +32,45 @@ Pega uma cor e a anterior e a próxima
 Se quiser complementar é só escolher a cor oposta a principal escolhida
 ** Cores análogas relacionadas **
 Escolha uma ao lado da outra e a terceira é uma depois da próxima ou anterior
-Para mais detalhe e criar uma palheta é preciso acessar o PDF e fazer a melhor escolha.
+Para mais detalhes e criar uma palheta é preciso acessar o PDF e fazer a melhor escolha.
+** Gerador de paletas **
+Agora que temos base da teoria das cores podemos usar ferramentas que faça isso automaticamente
+Um site muito usado pra isso é o ADOBE COLOR. Lá é possível gerar uma paleta de acordo com
+o método escolhido e também a partir de uma cor de base.
+Outra coisa muito interessante é que ele gera uma paleta de cores a partir de uma imagem na
+aba EXTRAIR TEMA.
+Além desse site temos também o site PALETTON, a principal vantagem é que esse site cria
+exemplos de sites que usam a paleta escolhida.
+** Capturar cores da tela **
+No GIMP é possível com a ferramenta de contagotas, porém quando tirada de um print
+nem sempre fica na mesma tonalidade.
+Tem outra ferramenta pra baixar em CHROME WEB STORE o aplicativo é o COLORZILLA.
+** Degradê no CSS **
+Para usar degradê temos o camando:
+
+<style>
+        * {
+            height: 100%;
+        }
+
+        body {
+            background-image: linear-gradient(45deg, #64BEE1, #A79082, #DFE054, #1A1915, #F6F2EF);
+            background-attachment: fixed;
+        }
+    </style>
+
+Onde está to right pode ser em graus também, por exemplo 90deg, etc.
+Outra observação é que no código acima foi usado a configuração global das CSS que
+está logo depois de *
+Para manter o degradê em toda página independente do conteúdo pode ser usado o
+background-attachment: fixed;
+
+
+
+
+
+
+
+
+
+
