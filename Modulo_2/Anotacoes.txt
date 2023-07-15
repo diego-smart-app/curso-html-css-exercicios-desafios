@@ -25,14 +25,18 @@ Também se partir ao meio temos as cores frias e quentes
 Num site são recomendados uso de paletas de 3 a 5 cores desconsiderando branco e preto,
 pois estarão presente.
 Num cliente que tem uma logo, vamos utilizar a cor primária da logo do cliente.
+
 ** Cores complementares **
 No círculo cromático são as cores opostas
+
 ** Cores análogas **
 Pega uma cor e a anterior e a próxima
 Se quiser complementar é só escolher a cor oposta a principal escolhida
+
 ** Cores análogas relacionadas **
 Escolha uma ao lado da outra e a terceira é uma depois da próxima ou anterior
 Para mais detalhes e criar uma palheta é preciso acessar o PDF e fazer a melhor escolha.
+
 ** Gerador de paletas **
 Agora que temos base da teoria das cores podemos usar ferramentas que faça isso automaticamente
 Um site muito usado pra isso é o ADOBE COLOR. Lá é possível gerar uma paleta de acordo com
@@ -41,10 +45,12 @@ Outra coisa muito interessante é que ele gera uma paleta de cores a partir de u
 aba EXTRAIR TEMA.
 Além desse site temos também o site PALETTON, a principal vantagem é que esse site cria
 exemplos de sites que usam a paleta escolhida.
+
 ** Capturar cores da tela **
 No GIMP é possível com a ferramenta de contagotas, porém quando tirada de um print
 nem sempre fica na mesma tonalidade.
 Tem outra ferramenta pra baixar em CHROME WEB STORE o aplicativo é o COLORZILLA.
+
 ** Degradê no CSS **
 Para usar degradê temos o camando:
 
@@ -60,10 +66,331 @@ Para usar degradê temos o camando:
     </style>
 
 Onde está to right pode ser em graus também, por exemplo 90deg, etc.
-Outra observação é que no código acima foi usado a configuração global das CSS que
+Outra observação é que no código acima foi usado a configurações globais das CSS que
 está logo depois de *
 Para manter o degradê em toda página independente do conteúdo pode ser usado o
 background-attachment: fixed;
+
+** Exemplo Real **
+Criar um arquivo HTML e um arquivo pra CSS depois de title coloca
+link:css
+No arquivo .CSS coloca: @charset "UTF-8"
+Pra não ter problemas com caracteres especiais na CSS
+
+** Tipografia **
+A tipografia é o estudo das fontes, é muito importante conhecer as fontes
+principalmente quando se trata da criação de sites, pois além de ter as cores
+de forma harmônica, também deve ter letras que condizem com a informação da
+mensagem trasmitida.
+
+** Anatomia do tipo **
+Estudando anatomia do tipo temos alguns elementos: filete, vértice, esporão,
+haste, arco, terminal.
+Elementos do corpo: braço, perna, pé, espinha, barriga, olho, orelha, cauda.
+O conjunto de glifos (letras) é determinado fonte.
+Na fonte tem variações, são elas as familias tipográficas
+Além das famílias temos as categorias de fontes, são elas:
+serifadas, sans-serif, monoespaçadas, handwriting, display.
+
+** Famílias de fontes em CSS **
+font-family
+Importante saber que as fontes quando são incluídas na configuração em CSS, são
+sugeridas algumas fontes, isso ocorre devido ao dispositivo onde será incluído,
+já que nem todos dispositivos tem todas as fontes, isso são as safe combination
+Pode ser colocado somente dados de anatomia, por exemplo: sans-serif, serif, etc.
+
+** Tamanhos de fontes e suas medidas **
+font-size
+Existem 2 tipos de medidas:
+Absolutas: cm, mm, in, px, pt, pc
+Relativas: em, ex, rem, vw, vh, %
+
+PRA FONT-SIZE O W3C RECOMENDA px OU em
+
+** Peso, estilo e shorthand font **
+font-weight
+O peso de uma fonte indica quanto ela é grossa, ou vários "negrito"
+Porém só existe pra algumas famílias de fontes como: 'work Sans'
+Nela podemos defnir o font-weight 100 a 900 ou lighter, normal, bold, bolder
+font-style
+normal, italic, 
+text_decoration
+underline
+Além de configurações separadas, elas podem ser juntadas num único parâmetro
+a ordem é:
+font-style, font-weight, font-size, font-family
+Exemplo:
+font: italic bolder 3em 'Work Sans', 'sans-serif';
+
+** Usando Google Fonts **
+Usar as fontes padrão do HTML é muito limitado, pra este problema temos o 
+Google Fonts
+Nesse site pode ser baixado ou usado uma importação que vem direto desse site
+
+** Baixar fontes **
+Um site muito recomendado é o DAFONT, porém deve ter cuidado com os glifos,
+pois tem algumas categorias que não tem glifos com acento.
+Depois de baixar e descompactar, copie e cole na pasta do arquivo html que
+usará a fonte baixada.
+Em CSS um seletor deve ser usado:
+@font-face {
+	font-family: ;
+	scr: url('nome da fonte.formato') format(formato descrito),
+	url('outra fonte.formato') format(formato descrito);
+
+Tipos de format()
+- opentype (otf)
+- truetype (ttf)
+- embedded-opentype
+- truetype-aat (Apple Advanced Typography)
+- svg
+
+** Descobrir fontes usadas num site **
+Baixar Fonts Ninja no google store e instalar extensão
+
+** Detecar fontes em imagens **
+whatfontis.com
+fontsquirrel.com
+myfonts.com
+
+** Alinhamento de Textos **
+text-aling
+
+** Seletores personalizados ids **
+Usado quando quer configurar individualmente um conjunto de
+elementos.
+
+Criando id
+<h1 id="qualquer_nome">
+
+Referenciando um id nas CSS
+h1#qualquer_nome
+
+Em HTML = id
+Em CSS = #
+Em HTML é class
+Em CSS é .
+
+Para identificar um conjunto de h2 por exemplo
+não se deve usar várias vezes o mesmo id, pois a
+W3C não recomenda. Pra fazer isso usamos o class
+
+Dica: Nunca dê nomes pelas formas e sim pela função de uma classe.
+
+Referenciar uma class
+<h2 class="crasse_escoida">
+
+Em CSS
+.crasse_escoida {
+	color...
+}
+
+Refeneciar um trecho
+<span class="qualquer">trecho do texto</span>
+
+Juntando classes
+<h2 class="classe1 classe2"
+
+Juntando classes e ids (porém id sobrepõe classes)
+<h2 id="meu_id" class="classe1 classe2"
+
+** Pseudo-classes **
+Abaixo símbolos de representação nas CSS
+Ids são #
+Classes são .
+Pseudo-classes são :
+exemplo de caixas
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+
+Configurando para mudar de cor ao passar mouse por cima
+ div:hover {
+            background-color: yellow;
+        }
+
+EXIBIR ALGO AO PASSAR MOUSE EM CIMA
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+        }
+
+        div:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>
+
+** Pseudo-elementos **
+Símbolos de SELETORES PERSONALIZADOS
+#	=	id
+.	=	class
+:	=	pseudo-class
+::	=	pseudo-element
+>	=	children
+
+São muitas as possibilidades ao usar os seletores, se quiser ver exemplos
+veja do exercício 20 pra trás.
+
+** Modelos de caixas / Box-Model**
+As caixas podem ser aninhadas
+Parâmetros das caixas:
+height - altura
+width - largura
+border - borda
+padding - espaço entre borda e caixa
+margin - espaço da borda pra fora
+outline - linha do lado de fora da borda (estranho como se fosse borda da borda)
+outline pode ser um contorno
+
+Existem dois tipos de caixa
+Box-level - Se inicia numa linha nova, ocupa largura total da tela
+Box-level é <div>
+Inline-level- Pula pro lado do conteúdo, fica na mesma linha, como se fosse
+uma outra palavra
+Inline-level- <span>
+
+Tipos de box-level:
+<div>
+<h1>-<h6>
+<p>
+<main>
+<header>
+<nav>
+<article>
+<aside>
+<footer>
+<form>
+<video>
+
+Tipos de inline-level:
+<span>
+<a>
+<code>
+<small>
+<strong>
+<em>
+<sup>-<sub>
+<label>
+<button>
+<input>
+<select>
+
+** Modelos de caixa na prática 1 **
+User agent é o navegador que usa
+No devtools no navegador vc pode mudar qualquer coisa
+no arquivo carregado e alterar o site, porém não é interfere
+no arquivo original.
+
+Alguns parâmetros pra box-level
+background-color: lightgray;
+height: 300px;
+width: 300px;
+border-width: 10px;
+border-style: dashed;
+border-color: darkslategray;
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+
+** Modelos de caixa na prática 2 **
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-bottom: 10px;
+
+Usando SHORTHANDS
+border-width: 10px;
+border-style: dashed;
+border-color: darkslategray;
+border: 10px solid darkslategray
+padding-top: 10px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+padding: 10px 10px 10px 10px ou padding 10px
+margin-top: 10px;
+margin-right: 10px;
+margin-bottom: 10px;
+margin-bottom: 10px;
+margin: 10px 10px 10px 10px ou margin: 10px
+Podemos automatizar as margens laterais
+margin: 10px auto 10px auto
+
+É possível mudar os elementos display
+Por exemplo colocando:
+display: block;
+ou 
+display: inline
+
+** Groupping Tags em HTML **
+O site é feito de caixas e organizar elas é
+muito importante.
+Todo site tem um conteúdo principal, cabeçalho e rodapé
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <p>Desenvolvido por Diego Ribeiro</p>
+    </footer>
+</body>
+O código acima é uma base, VEJA MAIS EM EX020/CAIXA02.HTML
+
+** Sombra das caixas **
+É possível criar sombras manualmente ou usar o devtools.
+Nesse caso editamos no navegador, depois é só copiar e
+colar.
+Exemplo-> box-shadow: 1px 1px 1px black;
+
+** Caixas com vértices arredondados **
+border-radius: 12px;
+Podemos usar separadamente
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+border-bottom-right-radius: 12px;
+border-bottom-left-radius: 12px;
+OU USAR UM SHORTHAND
+border: topL topR bottomR bottomL;
+
+Fazer um círculo
+Deixar apenas broder-radius: 50%;
+
+** Bordas personalizadas **
+Fazer uma imagem no GIMP porém deve ter fundo transparente
+Salva na pasta em .png
+No seletor fazer um border
+border: 20px solid black;
+padding: 10px;
+border-image-source: url('foto_borda.png')
+border-image-slice: 20; (esse parâmetro é que define o espaçamento)
+border-image-repeat: repeat; (ou stretch)
+
+
+
 
 
 
