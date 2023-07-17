@@ -184,6 +184,8 @@ referenciado no <head> depois de <title>
 Nesse caso usa-se link:css
 Também pode ser usado mais de um arquivo no link:css
 Nesse arquivo são colocados regras, elas são colocadas depois de @
+A principal regra é:
+@charset "UTF-8"
 
 Mas tudo pode ser combinado, por exemplo combinar coisas de um link externo pra um css e
 também combinar com um style local
