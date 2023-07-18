@@ -389,7 +389,60 @@ border-image-source: url('foto_borda.png')
 border-image-slice: 20; (esse parâmetro é que define o espaçamento)
 border-image-repeat: repeat; (ou stretch)
 
+** Anotações importantes do desafio 10 **
+Uma classe ou id pode ser referenciada no arquivo CSS
+sem mencionar o pai desse elemento
+Para centralizar uma imagem podemos colocar dentro de um span
+e nesse span definimos uma classe ou id
+Então no CSS mudamos para display block e text-aling center
 
+Em HTML:
+<span class="imagem-droid">
+	<img src="imagens/bugdroid.png" alt="Mascote e humado" >
+</span>
+
+Em CSS:
+.imagem-droid {
+    text-align: center;
+    display: block;
+}
+
+Observação:
+Planejar um site é muito importante
+layout, cores e fontes
+Site mokflow
+
+header
+h1/h1
+p/p
+/header
+article
+h1/h1
+p/p
+h2/h2
+p/p
+img
+p/p
+h2/h2
+p/p
+img
+p/p
+img
+p/p
+incorporar video yt
+aside
+h3/h3
+ul
+li
+li
+li
+li
+/ul
+p/p
+p/p
+/aside
+p/p
+/article
 
 
 
