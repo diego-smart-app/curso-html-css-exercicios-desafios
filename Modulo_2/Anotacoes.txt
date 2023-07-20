@@ -445,6 +445,99 @@ p/p
 /article
 
 
+#*#*#*#  VARIÁVEIS  #*#*#*#
+
+## DEFINIR PALETA E FONTES EM VARIÁVEIS ##
+Importante pra mudanças futuras.
+:root {
+	--cor0: #c2f251;
+	--cor1: #47dfe6;
+	--cor2: #1d2ef9;
+	--cor3: 9f9e6ac;
+	--cor4: 3dafcbe;
+
+	--fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+	--fonte-destaque: 'Bebas Neue', cursive;
+}
+
+
+
+body {
+	background-color: var(cor0);
+	font-family: var(fonte-padrao);
+}
+
+Organizar o CSS de acordo com o arquivo HTML
+
+## TODOS SEM MARGEM ##
+* {
+	margin: 0;
+}
+
+
+#*#*#*# RESPONSIVIDADE  #*#*#*#
+window resizer
+Extensão
+Permitir acesso as url de arquivos
+Com esta exensão é possível simular o site em diversos
+dispositivos.
+
+min-width: 280px;
+max-width: 800px;
+Linhas que ajudam muito
+
+img {
+      width: 100%;
+}
+
+header {
+	min-height: 150px;
+	text-aling: center;
+}
+
+main strong {
+
+}
+
+list-style-type: '\num_emoji\00A0\00A0';
+Essa linha não é compatível com todos navegadores
+
+#*#*#*# RESPONSIVIDADE DE VÍDEO INCORPORADO  #*#*#*#
+Centralizar o vídeo
+
+EM HTML:
+
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M"
+	 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+	 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	 allowfullscreen></iframe>
+</div>
+
+
+EM CSS:
+
+div.video {
+	background-color: rgb(37, 66, 37);
+	margin: 0px, -20px 30px -20px;
+	padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+
+
+
+
 
 
 
