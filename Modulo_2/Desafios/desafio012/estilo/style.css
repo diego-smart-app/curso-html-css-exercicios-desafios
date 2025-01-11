@@ -1,12 +1,14 @@
 @charset "UTF8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 
 :root
 {
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: font-family: "Passero One", cursive;
-    --fonte3: font-family: "Sriracha", cursive;
+    --fonte2: "Crimson Pro", serif;
+    --fonte3: "Playwrite AU SA", serif;
 }
 
 * {
@@ -27,17 +29,21 @@ header
     color: white;
     text-align: center;
     font-family: var(--fonte2);
+    font-size: 4em;
 }
 
 header > h1
 {
     padding-top: 50px;
     font-variant: small-caps;
+    font-size: 5vw;
 }
 
 header > p
 {
     padding-bottom: 50px;
+    font-family: var(--fonte2);
+    font-size: 1em;
 }
 
 header a, footer a
@@ -59,6 +65,7 @@ section
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--fonte3);
+    font-size: 3vw;
 }
 
 section.normal
@@ -75,7 +82,8 @@ section.imagem
 
 section.imagem > p
 {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.253);
 }
 
@@ -85,4 +93,6 @@ footer
     color: white;
     text-align: center;
     padding: 10px;
+    font-family: var(--fonte2);
+    font-size: 1em;
 }
