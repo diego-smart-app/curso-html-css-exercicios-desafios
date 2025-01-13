@@ -14,12 +14,33 @@
         {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption
+        {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th
         {
             border: 1px solid black;
             padding: 10px;
+        }
+
+        tbody > tr:nth-child(2n) /*2n de 2 em 2, odd ímpares, even pares*/
+        {
+            background-color: lightgray;
+        }
+
+        thead > tr > th
+        {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
         }
 
         thead, tfoot
@@ -39,6 +60,7 @@
     <!--
         ANATOMIA PARA TABELAS GRABNDES
             TABLE
+                CAPTION
                 THEAD
                     TR, TD, TH
                 TBODY
@@ -47,10 +69,13 @@
                     TR, TD, TH
     -->
     <table>
+        <caption>
+            Populações das Unidades Federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -108,10 +133,27 @@
         </tfoot>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>172 277 535</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, officia odit ducimus, temporibus dolore aliquam labore modi mollitia similique corrupti tenetur quos veniam sapiente accusantium, aliquid optio dicta est recusandae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur a quisquam facilis, obcaecati doloribus inventore et facere, vero autem quos assumenda iusto iure, quas nisi quod officia minima rem ad? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, exercitationem. Molestias quasi tempora, totam natus explicabo saepe reiciendis facere porro officiis ea, dolorem nobis quisquam est soluta repellendus error! Tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae fugit autem ipsam vitae reiciendis eaque, in esse quod commodi nesciunt maxime modi voluptates suscipit quo eius, animi mollitia impedit.</p>
 </body>
 </html>
