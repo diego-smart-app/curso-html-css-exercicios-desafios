@@ -571,5 +571,17 @@ A forma mais segura é usar HTTPS que criptografa os dados
 Usando método get, é possível enviar até 3kbites (aproximadamente 3 mil letras)
 
 
+#*#*#*# ESCONDENDO senha do formulário  #*#*#*#
 
+
+    <form action="cadastro.js" method="post">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu">
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen">
+        </p>
+    </form>
 
