@@ -585,3 +585,7 @@ Usando método get, é possível enviar até 3kbites (aproximadamente 3 mil letr
         </p>
     </form>
 
+
+#*#*#*# FORMULÁRIO COM DATA, HORA, ETC  #*#*#*#
+
+EX025 form003.html
